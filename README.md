@@ -1,2 +1,3 @@
 # mySql
-Introduction to mysql
+
+Introduction to mysql.
