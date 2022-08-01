@@ -51,5 +51,22 @@ from products
 where category IN ( "Beverages","Dairy Products" ) and discontinued <>1;
 
 
+select group_concat(distinct(category))
+from products
+group by category;
+
+
+#Having Clause: When you want to filter data in groups/ mathematical functions you use having. You will see Having clause with group by
+
+select category, sum(units_in_stock)
+from products
+group by category
+having sum(units_in_stock) > 300;
+
+#Excercise
+select year(order_date) as Year, sum(freight) as Freight
+from orders
+group by year(order_date);
+
 
 
